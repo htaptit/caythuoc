@@ -5,7 +5,7 @@
 	<meta http-equiv="content-type" content="text/html" />
 	<meta name="author" content="Line" />
     <meta charset="utf-8" />
-	<title><?=(isset($title) ? 'Dura Cloud | ' . $title : 'Dura Cloud')?></title>
+	<title><?=(isset($title) ? 'Cloud | ' . $title : 'Cloud')?></title>
     <link href="<?=CSS_URL.'style.css'?>" rel="stylesheet">
     <link href="<?=LIB_URL.'bootstrap/css/bootstrap.min.css'?>" rel="stylesheet">
     <link href="<?=LIB_URL.'bootstrap/css/bootstrap-responsive.css'?>" rel="stylesheet">
