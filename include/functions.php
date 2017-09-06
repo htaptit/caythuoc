@@ -131,6 +131,7 @@ function get_the_content($str){
 
 function pagination( $table, $record, $file = null, $order = false ){
     $data = mysqli_getAll($table); // all record
+
     $total = count( $data ); // number of record
     $nums = ceil($total/$record); // page nums
     if( isset($_GET['page']) && $_GET['page'] != '' ){
@@ -138,7 +139,6 @@ function pagination( $table, $record, $file = null, $order = false ){
     } else{
     	$page = 1;
     }
-
     $html = '<ul>';
 
 	if( $page != 1 ){
@@ -167,6 +167,7 @@ function pagination( $table, $record, $file = null, $order = false ){
     $result = new stdClass();
     $result->data = $data;
     $result->pagination = $html;
+    // print_r($result);
     return $result;
 }
 function confirm_query($result, $query) {
@@ -306,8 +307,8 @@ function the_excerpt($text, $string = 600) {
    
 } // End the_excerpt
 function strtotime_format($str, $type = 'd-m-Y') {
-    $date = new DateTime($str);
-    return $date->format($type);
+    $date = strtotime($str);
+    return date('Y/m/d H:s', $date);
 }
 function get_author($id) {
     global $dbc;

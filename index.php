@@ -22,23 +22,23 @@
                                 foreach($data as $key => $val) :
                         ?>
                                 <div class="entry ">
-                                	<div class="entry-previewimage rounded"><a href="" title="<?=$val['ten']?>">
-                                    <img src="<?=(isset($val['anh']) && $val['anh'] != '' ? UPLOAD_DIR . $val['anh'] : IMAGES_URL . 'no-logo.png')?>" alt="<?=$val['ten']?>" alt="<?=$val['ten']?>" /></a></div>			
+                                	<div class="entry-previewimage rounded"><a href="" title="<?php echo $val['ten'] ?>">
+                                    <img src="<?php echo (isset($val['anh']) && $val['anh'] != '' ? UPLOAD_DIR . $val['anh'] : IMAGES_URL . 'no-logo.png') ?>" alt="<?php echo $val['ten']?>"/></a></div>			
                                 	<div class="entry-content">
                                 		<h1 class="entry-heading">
-                                			<a href="<?=SITE_URL.'product.php?id='.$val['id'].'&control=idcaythuoc'?>" title="<?=$val['ten']?>"><?=$val['ten']?></a>
+                                			<a href="<?php echo SITE_URL.'product.php?id='.$val['id'].'&control=idcaythuoc'?>" title="<?php echo $val['ten']?>"><?php echo $val['ten']?></a>
                                 		</h1>
                                 		<div class="entry-head">
-                                			<span class="date ie6fix"><?=strtotime_format($val['ngaytao'])?></span>
-                                			<span class="comments ie6fix"><a href="#comments"><?=count_comment($val['id'], 'idcaythuoc')?> comments</a></span>
+                                			<span class="date ie6fix"><?php echo strtotime_format($val['ngaytao'])?></span>
+                                			<span class="comments ie6fix"><a href="#comments"><?php echo count_comment($val['id'], 'idcaythuoc')?> comments</a></span>
                                 		</div>
                                 		
                                 		<div class="entry-text">
-                                			<p><?=the_excerpt($val['mota'], 380)?>...</p>
+                                			<p><?php echo the_excerpt($val['mota'], 380)?>...</p>
                                 		</div>
                                 		
                                 		<div class="entry-bottom">
-                                            <a href="<?=SITE_URL.'product.php?id='.$val['id'].'&control=idcaythuoc'?>" class="more-link">Read more</a>
+                                            <a href="<?php echo SITE_URL.'product.php?id='.$val['id'].'&control=idcaythuoc'?>" class="more-link">Read more</a>
                                 		</div>
                                 	</div>
                                     <!--end entry_content-->

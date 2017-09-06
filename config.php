@@ -9,7 +9,7 @@
     } else{
     	define( 'BASE_URL', 'http://'.$_SERVER['SERVER_NAME'].'/' );
     }
-    define( 'SITE_URL', 'http://'.$_SERVER['SERVER_NAME'].'/source/' ); // Đường Dẫn Thư Mục Chứa Code
+    define( 'SITE_URL', 'http://'.$_SERVER['SERVER_NAME'].'/' ); // Đường Dẫn Thư Mục Chứa Code
     define( 'ADMIN_URL', SITE_URL. 'admincp/' );
     define( 'ADMIN_IMG_URL', ADMIN_URL . 'img/');
     define( 'ADMIN_JS_URL', ADMIN_URL . 'js/' );
@@ -24,10 +24,10 @@
     define( 'IMG_URL', SITE_URL. 'images/' );
     
     // config database connect
-    define( 'hostname', $_SERVER['SERVER_NAME'] );
+    define( 'hostname', '127.0.0.1' );
     define( 'database', 'thuocdb' ); // Tên Database
     define( 'username', 'root' ); // User
-    define( 'password', '' );
+    define( 'password', 'root' );
     define( 'charset', 'utf8' );
     require_once 'include/functions.php';
 ?>
